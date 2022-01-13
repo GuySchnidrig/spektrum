@@ -1,2 +1,0 @@
-# spektrum
- spektrum R package

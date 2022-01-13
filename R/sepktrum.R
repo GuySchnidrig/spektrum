@@ -5,6 +5,8 @@
 ## Author: Guy Schnidrig BLV/VPHI               ##
 ##################################################
 
+#
+usethis::use_package("ggplot2") # Default is "Imports"
 
 # Define spectrum colors ####
 spektrum_col<- c(
@@ -29,7 +31,7 @@ spektrum_col<- c(
 spektrum_colors <- as.data.frame(t(spektrum_col))
 
 #' Function for hex codes ####
-#' @... Character names of spektrum
+#' @param ... Character names of spektrum
 spektrum <- function(...) {
   cols <- c(...)
   
@@ -40,6 +42,7 @@ spektrum <- function(...) {
 }
 
 #' Function to list all spektrum colors with hex code ####
+#' @keywords spektrum color
 #' @export
 list_spektrum_colors <- function(...){
   return (spektrum_col)
@@ -116,6 +119,7 @@ spektrum_palettes <- list(
                         "orange_3"))
 
 #' Function to list all spektrum palettes####
+#' @keywords spektrum palette
 #' @export
 list_spektrum_palettes <- function(...){
   return (spektrum_palettes)
@@ -123,9 +127,9 @@ list_spektrum_palettes <- function(...){
 
 
 #'  Palette function####
-#'  @palette Character name of palette in spektrum_palettes
-#'  @reverse Boolean indicating whether the palette should be reversed
-#'  @... Additional arguments to pass to colorRampPalette()
+#'  @param palette Character name of palette in spektrum_palettes
+#'  @param reverse Boolean indicating whether the palette should be reversed
+#'  @param ... Additional arguments to pass to colorRampPalette()
 spektrum_pal <- function(palette = "main", reverse = FALSE, ...) {
   pal <- spektrum_palettes[[palette]]
   
@@ -137,11 +141,11 @@ spektrum_pal <- function(palette = "main", reverse = FALSE, ...) {
 #' Functions for Scales in ggplot2 ####
 
 #' color scale constructor for spektrum
-#' @palette Character name of palette in spektrum_palettes
-#' @discrete Boolean indicating whether color aesthetic is discrete or not
-#' @reverse Boolean indicating whether the palette should be reversed
-#' @... Additional arguments passed to discrete_scale() or
-#' scale_color_gradientn(), used respectively when discrete is TRUE or FALSE
+#' @param palette Character name of palette in spektrum_palettes
+#' @param discrete Boolean indicating whether color aesthetic is discrete or not
+#' @param reverse Boolean indicating whether the palette should be reversed
+#' @param ... Additional arguments passed to discrete_scale or
+#' scale_color_gradientn, used respectively when discrete is TRUE or FALSE
 #' @export
 scale_color_spektrum <- function(palette = "main", discrete = TRUE, reverse = FALSE, ...) {
   pal <- spektrum_pal(palette = palette, reverse = reverse)
@@ -154,11 +158,11 @@ scale_color_spektrum <- function(palette = "main", discrete = TRUE, reverse = FA
 }
 
 #' Fill scale constructor for spektrum
-#' @palette Character name of palette in spektrum_palettes
-#' @discrete Boolean indicating whether color aesthetic is discrete or not
-#' @reverse Boolean indicating whether the palette should be reversed
-#' @... Additional arguments passed to discrete_scale() or
-#' scale_fill_gradientn(), used respectively when discrete is TRUE or FALSE
+#' @param palette Character name of palette in spektrum_palettes
+#' @param discrete Boolean indicating whether color aesthetic is discrete or not
+#' @param reverse Boolean indicating whether the palette should be reversed
+#' @param ... Additional arguments passed to discrete_scale or
+#' scale_fill_gradientn, used respectively when discrete is TRUE or FALSE
 #' @export
 scale_fill_spektrum <- function(palette = "main", discrete = TRUE, reverse = FALSE, ...) {
   pal <- spektrum_pal(palette = palette, reverse = reverse)
@@ -170,7 +174,7 @@ scale_fill_spektrum <- function(palette = "main", discrete = TRUE, reverse = FAL
   }
 }
 
-# imoprts the replace function from ggplot, gave me trouble without
+# imports the replace function from ggplot, gave me trouble without
 
 `%+replace%` <- ggplot2::'%+replace%' # nolint
 

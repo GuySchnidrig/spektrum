@@ -9,3 +9,5 @@ list_spektrum_palettes(...)
 \description{
 Function to list all spektrum palettes####
 }
+\keyword{palette}
+\keyword{spektrum}

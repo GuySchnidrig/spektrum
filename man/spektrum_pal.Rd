@@ -3,15 +3,15 @@
 \name{spektrum_pal}
 \alias{spektrum_pal}
 \title{Palette function####
-@palette Character name of palette in spektrum_palettes
-@reverse Boolean indicating whether the palette should be reversed
-@... Additional arguments to pass to colorRampPalette()}
+@param palette Character name of palette in spektrum_palettes
+@param reverse Boolean indicating whether the palette should be reversed
+@param ... Additional arguments to pass to colorRampPalette()}
 \usage{
 spektrum_pal(palette = "main", reverse = FALSE, ...)
 }
 \description{
 Palette function####
-@palette Character name of palette in spektrum_palettes
-@reverse Boolean indicating whether the palette should be reversed
-@... Additional arguments to pass to colorRampPalette()
+@param palette Character name of palette in spektrum_palettes
+@param reverse Boolean indicating whether the palette should be reversed
+@param ... Additional arguments to pass to colorRampPalette()
 }

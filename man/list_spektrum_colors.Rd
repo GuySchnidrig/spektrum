@@ -9,3 +9,5 @@ list_spektrum_colors(...)
 \description{
 Function to list all spektrum colors with hex code ####
 }
+\keyword{color}
+\keyword{spektrum}

@@ -6,6 +6,9 @@
 \usage{
 spektrum(...)
 }
+\arguments{
+\item{...}{Character names of spektrum}
+}
 \description{
 Function for hex codes ####
 }

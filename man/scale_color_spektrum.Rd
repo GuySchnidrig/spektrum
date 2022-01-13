@@ -7,6 +7,16 @@ color scale constructor for spektrum}
 \usage{
 scale_color_spektrum(palette = "main", discrete = TRUE, reverse = FALSE, ...)
 }
+\arguments{
+\item{palette}{Character name of palette in spektrum_palettes}
+
+\item{discrete}{Boolean indicating whether color aesthetic is discrete or not}
+
+\item{reverse}{Boolean indicating whether the palette should be reversed}
+
+\item{...}{Additional arguments passed to discrete_scale or
+scale_color_gradientn, used respectively when discrete is TRUE or FALSE}
+}
 \description{
 Functions for Scales in ggplot2 ####
 color scale constructor for spektrum
