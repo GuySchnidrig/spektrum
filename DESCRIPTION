@@ -1,0 +1,13 @@
+Package: spektrum
+Title: spektrum colors and ggplot theme
+Version: 1.0.0.000
+Authors@R: 
+    person("Guy", "Schnidrig", "schnidrig.guy@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Provides the spektrum colors from ALVPH and and a ggplot theme.
+License: use_gpl3_license()
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Imports:
+    ggplot2
